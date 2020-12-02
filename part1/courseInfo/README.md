@@ -1,0 +1,1 @@
+This is excersise Part 1 of the course from Helsinki University.
