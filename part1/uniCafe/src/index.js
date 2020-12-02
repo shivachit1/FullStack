@@ -48,29 +48,27 @@ const Statistics = ({ good, neutral, bad }) => {
     );
   }
   return (
-    <div>
+    <table width={120}>
+      <tbody>
       <Statistic text="good" value={good} />
       <Statistic text="neutral" value={neutral} />
       <Statistic text="bad" value={bad} />
       <Statistic text="all" value={all} />
       <Statistic text="average" value={average} />
       <Statistic text="positive" value={positive} />
-    </div>
+      </tbody>
+    </table>
   );
 };
 
 const Statistic = ({ text, value }) => {
   return (
-    <div>
-      <table width={120}>
-      <tbody>
+    
         <tr>
           <td style={{width:'50%'}}>{text}</td>
           <td style={{ textAlign: 'left',width:'50%'}}>{value}</td>
         </tr>
-      </tbody>
-    </table>
-    </div>
+     
     
   );
 };
