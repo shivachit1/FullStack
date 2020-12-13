@@ -3,7 +3,7 @@ const Persons = (props) =>{
     return(
         <div>
       {props.persons.map(person =>
-          <Person search={props.search} key={person.name} person={person}/>
+          <Person search={props.search} key={person.name} person={person} deletePerson={()=>props.deletePerson(person)}/>
         )}
       </div>
     )
@@ -16,7 +16,7 @@ const Person = (props) =>{
        return null
     }
     return(
-    <p>{props.person.name}  {props.person.number}</p>
+    <p>{props.person.name}  {props.person.number} <button onClick={props.deletePerson}>delete</button></p>
     )
 }
 
